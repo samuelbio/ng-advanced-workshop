@@ -13,11 +13,15 @@
 <h2>Result</h2>
 <!-- Edit the code down below to implement the requested features -->
 <div>
-  <div>Select one of 0 countries:</div>
-  <select>
-    <option>
-      United States
-    </option>
-  </select>
-  <div>Current value: US</div>
+  <ng-container *ngIf="(countryList$ | async) as countryList">
+    <div>Select one of {{countryList.length}} countries:</div>
+    <select [(ngModel)]="countrySelected">
+      <option value=""></option>
+      <option *ngFor="let country of countryList" [value]="country.id">
+        {{country.description}}
+      </option>
+    </select>
+    <div>Current value: {{countrySelected}}</div>
+  </ng-container>
+
 </div>

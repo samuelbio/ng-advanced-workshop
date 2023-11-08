@@ -10,7 +10,7 @@ import { Exercise2Component } from './exercise2/exercise2.component';
 import { Solution2Component } from './solution/solution2/solution2.component';
 import { Exercise3Component } from './exercise3/exercise3.component';
 import { Solution3Component } from './solution/solution3/solution3.component';
-import {ReactiveFormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HighlightPipe } from './solution/solution3/highlight.pipe';
 import { Exercise4Component } from './exercise4/exercise4.component';
 import {Solution4Component} from './solution/solution4/solution4.component';
@@ -36,7 +36,8 @@ import { Exercise7Component } from './exercise7/exercise7.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
